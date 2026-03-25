@@ -43,7 +43,9 @@
       "Bash(git branch -m main && git commit -m \"feat: initial commit - AI image gallery with Cloudflare Workers\n\nFeatures:\n- Multiple AI models support \\(Flux.1 Schnell, Flux.2 Klein, SDXL, etc.\\)\n- Image generation with advanced options \\(negative prompt, steps, guidance, seed\\)\n- Reference image upload for Flux.2 Klein model\n- Date-based filtering and search functionality\n- Admin panel with authentication\n- Public gallery view\n- R2 storage for images\n- D1 database for metadata\")",
       "Bash(git push -u origin main 2>&1)",
       "Bash(export CLOUDFLARE_API_TOKEN=\"cfut_z8z3F0tWPXa9BScgyn7gryaAkEjzNkgjG22zRWQdcccaa5fc\" && echo \"628456126215b0dcf869986374edd30d77806926d7c84e2c477c655f1161efba\" | npx wrangler secret put JWT_SECRET 2>&1)",
-      "Bash(git add -A && git commit -m \"security: remove sensitive info from wrangler.toml\n\n- Move secrets to .dev.vars for local development\n- Add .dev.vars to .gitignore\n- Update wrangler.toml to use Cloudflare secrets for production\")"
+      "Bash(git add -A && git commit -m \"security: remove sensitive info from wrangler.toml\n\n- Move secrets to .dev.vars for local development\n- Add .dev.vars to .gitignore\n- Update wrangler.toml to use Cloudflare secrets for production\")",
+      "Bash(git push origin main 2>&1)",
+      "Bash(git add -A && git commit -m \"docs: update README with all features\" && git push origin main)"
     ]
   }
 }
