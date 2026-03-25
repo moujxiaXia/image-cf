@@ -17,22 +17,13 @@ binding = "DB"
 database_name = "image-cf-db"
 database_id = "7a35e18a-104e-4a4b-9d26-55e6027014fa"
 
-# 环境变量
-[vars]
-JWT_SECRET = "628456126215b0dcf869986374edd30d77806926d7c84e2c477c655f1161efba"
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "Dg3+Zy08snoHOmLL"
-
-# 生产环境配置
-[env.production]
-vars = { JWT_SECRET = "628456126215b0dcf869986374edd30d77806926d7c84e2c477c655f1161efba", ADMIN_USERNAME = "admin", ADMIN_PASSWORD = "Dg3+Zy08snoHOmLL" }
-
-[[env.production.d1_databases]]
-binding = "DB"
-database_name = "image-cf-db"
-database_id = "7a35e18a-104e-4a4b-9d26-55e6027014fa"
-
 # 静态资源 - 使用 assets 配置
 [assets]
 directory = "./public"
 binding = "ASSETS"
+
+# 生产环境配置
+# 注意：敏感变量请使用 Cloudflare Dashboard 设置 Secrets
+# wrangler secret put JWT_SECRET
+# wrangler secret put ADMIN_USERNAME
+# wrangler secret put ADMIN_PASSWORD
